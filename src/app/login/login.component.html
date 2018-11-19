@@ -1,0 +1,31 @@
+<div class="login-page">
+    <div class="content">
+        <!-- <h1 class="app-name">Sb Admin Material</h1> -->
+        <form class="login-form">
+            <div class="text-center">
+                <h2 class="app-name">SalseForce Angular</h2>
+            </div>
+            <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input matInput placeholder="Email" [formControl]="username" required>
+                        <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input matInput type="password" [formControl]="password"  placeholder="Password">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <button  mat-button  type="button"  color="primary" class="w-100" (click)="onLogin()">Login</button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
